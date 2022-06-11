@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "API for learn project",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,3 +23,4 @@
   },
   "homepage": "https://github.com/Xrustofor/dashboard-api-node-test#readme"
 }
+ 
