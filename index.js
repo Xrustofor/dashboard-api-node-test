@@ -1,16 +1,27 @@
-import http, { request } from 'http';
+import express from "express"
 
-const host = '127.0.0.1';
 const port = 8000;
+const app = express();
 
-const server = http.createServer((req, res) => {
-    console.log(req.url);
-    console.log(req.method);
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World!');
+app.all('/hello', (req, res, next) => {
+    console.log('All');
+    next();
 })
 
-server.listen(port, host, () => {
-    console.log(`Server start on ${host}: ${port}`);
-});
+const cb = (req, res, next) => {
+    console.log('CB');
+    next();
+};
+
+app.get('/hello', (req, res) => {
+        res.send('Hello World!');
+    })
+
+// app.get('/hello', (req, res) => {
+//     res.send('Hello World!')
+// })
+
+
+app.listen(port, () => {
+    console.log(`Server start on http://localhost:${port}`);
+})

@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +22,8 @@
   "bugs": {
     "url": "https://github.com/Xrustofor/dashboard-api-node-test/issues"
   },
-  "homepage": "https://github.com/Xrustofor/dashboard-api-node-test#readme"
+  "homepage": "https://github.com/Xrustofor/dashboard-api-node-test#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
- 
