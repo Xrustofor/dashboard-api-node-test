@@ -1,26 +1,18 @@
-let a: number = 5;
-let b: string = '4';
+let universalId: number | string = 5;
+universalId = 'fasdfasd';
 
-let c: number = a + Number(b);
-let d = true;
-
-let names: string[] = ['sd', 'sdfc'];
-let qges: number[] = [5, 7];
-
-let tup: [number, string] = [2, 'asdasd']
-
-let e: any = 3;
-e = 'dasd';
-e = true;
-
-let anyArr: any[] = ['asdasd', 23, true];
-
-function greet(name: string): string {
-    return name + 'Hi'
+function prinId(id: number | string) {
+    if(typeof id == 'string'){
+        console.log(id.toUpperCase)
+    }else{
+        console.log(id);
+    }
 }
 
-names.map((x: string) => x);
-
-function coord(coord: { lat: number, long?: number }){
-
+function helloUser(user: string | string[]){
+    if(Array.isArray(user)){
+        console.log(user.join(', ') + 'Hi')
+    }else{
+        console.log(user + 'Hi');
+    }
 }
