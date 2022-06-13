@@ -1,29 +1,31 @@
 type direction = 'left' | 'right';
 
-function moveDog(direction: direction){
+enum Direction {
+    Left,
+    Right
+}
+
+
+function move(direction: Direction){
     switch(direction){
-        case 'left':{
+        case Direction.Left:{
             return -1;
-        };
-        case 'right': {
+        }
+        case Direction.Right:{
             return 1
-        };
-        default: return 0;
+        }
     }
 }
 
-const connection = {
-    host: 'localhost',
-    protocol: 'https' as 'https'
-}
- 
-let a: any = 5;
-// let c: number = a as number;
-let c = <number>a;
-let d = a as number;
-
-function connecti(host: string, protocol: 'http' | 'https'){
+function objMod(obj: {Left: number}){
 
 }
 
-connecti(connection.host, connection.protocol);  
+objMod(Direction);
+
+const enum Diraction2{
+    Up,
+    Down
+}
+
+let myDirection = Diraction2.Up;
