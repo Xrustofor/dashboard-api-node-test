@@ -4,11 +4,21 @@ import { usersRouter } from './users/users.js'
 const port = 8000;
 const app = express();
 
+app.use('/hello',(req, res, next) => {
+    console.log(`Час: ${Date.now()}`);
+    next();
+})
+
 app.get('/hello', (req, res) => {
-        res.send('Hello World!');
+        throw new Error('Error !!');
     })
 
 app.use('/users', usersRouter);
+
+app.use((err, req, res, next) => {
+    console.log(err.message);
+    res.status(401).send(err.message);
+})
 
 app.listen(port, () => {
     console.log(`Server start on http://localhost:${port}`);
