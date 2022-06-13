@@ -1,6 +1,6 @@
 import { Logger } from 'tslog';
 
-export class LogerService {
+export class LoggerService {
     public logger: Logger;
 
     constructor(){
