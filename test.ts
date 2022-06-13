@@ -1,24 +1,25 @@
 type coord = { lat: number, long: number };
 
 interface ICoord {
-    lat: number,
-    long: number
+    lat: number;
+    long: number;
 }
 
 type ID = number | string;
 
-function compute(coord: ID) {
+function compute( coord: ICoord){
 
 }
 
-interface Animal {
+interface Dog {
     name: string;
 }
 
-interface Dog extends Animal {
-    tail?: boolean;
+interface Dog {
+    tail: boolean;
 }
 
 const dog: Dog = {
-    name: 'sdf'
+    name: 'qweqw',
+    tail: true,
 }
