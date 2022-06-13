@@ -1,25 +1,30 @@
-type coord = { lat: number, long: number };
+const a = 'sdads'
 
-interface ICoord {
-    lat: number;
-    long: number;
+let b: 'hi' = 'hi'
+
+type direction = 'left' | 'right';
+
+function moveDog(direction: direction){
+    switch(direction){
+        case 'left':{
+            return -1;
+        };
+        case 'right': {
+            return 1
+        };
+        default: return 0;
+    }
 }
 
-type ID = number | string;
+moveDog('left')
 
-function compute( coord: ICoord){
+interface IConnection {
+    host: string,
+    post: number,
+}
+
+function connection(connection: IConnection | 'default'){
 
 }
 
-interface Dog {
-    name: string;
-}
-
-interface Dog {
-    tail: boolean;
-}
-
-const dog: Dog = {
-    name: 'qweqw',
-    tail: true,
-}
+connection("default");
