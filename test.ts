@@ -1,7 +1,3 @@
-const a = 'sdads'
-
-let b: 'hi' = 'hi'
-
 type direction = 'left' | 'right';
 
 function moveDog(direction: direction){
@@ -16,15 +12,18 @@ function moveDog(direction: direction){
     }
 }
 
-moveDog('left')
+const connection = {
+    host: 'localhost',
+    protocol: 'https' as 'https'
+}
+ 
+let a: any = 5;
+// let c: number = a as number;
+let c = <number>a;
+let d = a as number;
 
-interface IConnection {
-    host: string,
-    post: number,
+function connecti(host: string, protocol: 'http' | 'https'){
+
 }
 
-function connection(connection: IConnection | 'default'){
-
-}
-
-connection("default");
+connecti(connection.host, connection.protocol);  
