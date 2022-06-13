@@ -1,18 +1,24 @@
-let universalId: number | string = 5;
-universalId = 'fasdfasd';
+type coord = { lat: number, long: number };
 
-function prinId(id: number | string) {
-    if(typeof id == 'string'){
-        console.log(id.toUpperCase)
-    }else{
-        console.log(id);
-    }
+interface ICoord {
+    lat: number,
+    long: number
 }
 
-function helloUser(user: string | string[]){
-    if(Array.isArray(user)){
-        console.log(user.join(', ') + 'Hi')
-    }else{
-        console.log(user + 'Hi');
-    }
+type ID = number | string;
+
+function compute(coord: ID) {
+
+}
+
+interface Animal {
+    name: string;
+}
+
+interface Dog extends Animal {
+    tail?: boolean;
+}
+
+const dog: Dog = {
+    name: 'sdf'
 }
